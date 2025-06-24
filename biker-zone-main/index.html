@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <title>Biker Zone</title>
+  
+  <style>
+    .poppins { font-family: 'Poppins', sans-serif; }
+    
+    /* Smooth scrolling */
+    html { scroll-behavior: smooth; }
+    
+    /* Button animations */
+    .btn-animated {
+      transition: all 0.3s ease;
+    }
+    
+    .btn-animated:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(231, 111, 81, 0.3);
+    }
+    
+    /* Gradient text */
+    .gradient-text {
+      background: linear-gradient(135deg, #264653, #E76F51);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Hero background pattern */
+    .hero-pattern {
+      background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+      background-size: 20px 20px;
+    }
+  </style>
+</head>
+
+<body class="poppins">
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50">
+    <nav class="navbar bg-[#264653] shadow-lg backdrop-blur-sm">
+      <div class="navbar-start">
+        <div class="text-white font-bold text-xl">BikerZone</div>
+      </div>
+
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 space-x-2">
+          <li><a class="text-white">Home</a></li>
+          <li><a class="text-white">Shop</a></li>
+          <li><a class="text-white">News</a></li>
+          <li><a class="text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="navbar-end">
+        <div class="dropdown lg:hidden">
+          <div tabindex="0" role="button" class="btn btn-ghost text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-white rounded-box z-10 mt-3 w-52 p-2 shadow-xl right-0">
+            <li><a>Home</a></li>
+            <li><a>Shop</a></li>
+            <li><a>News</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        
+        <button class="btn bg-[#E76F51] text-white border-none btn-animated ml-4">Login</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero bg-[#264653] hero-pattern min-h-screen">
+    <div class="hero-content flex-col lg:flex-row-reverse max-w-7xl">
+      <div class="flex-1">
+        <img src="images/slider/bike2.png" class="max-w-full h-auto" alt="Honda CBR 300R" />
+      </div>
+      <div class="flex-1 text-center lg:text-left">
+        <p class="text-gray-300 py-4 text-lg">Computer-controlled digital transistorized with electronic advance</p>
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Honda CBR 300R</h1>
+        <p class="py-6 text-gray-300 text-lg leading-relaxed max-w-lg">
+          Experience the thrill of the road with our premium motorcycles. Built for performance, designed for adventure, crafted for riders who demand excellence.
+        </p>
+        <button class="btn bg-[#E76F51] text-white border-none btn-animated px-8 py-3 text-lg">Purchase Now</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-7xl mx-auto px-4">
+    
+    <!-- Featured Bikes Section -->
+    <section class="py-20">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">Featured Bikes This Year</h2>
+        <p class="text-[#E76F51] text-xl font-semibold">Best bike collection</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+        <div>
+          <img src="images/others/feature-bike.png" alt="Featured Bike" class="w-full h-auto grayscale" />
+        </div>
+        <div>
+          <img src="images/others/feature-bike.png" alt="Featured Bike" class="w-full h-auto" />
+        </div>
+        <div>
+          <img src="images/others/feature-bike.png" alt="Featured Bike" class="w-full h-auto grayscale" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="py-20">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold gradient-text">Latest News</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="card bg-white shadow-xl">
+          <figure>
+            <img src="images/others/latest1.png" alt="Ducati XDIAVEL S-73" class="w-full h-64 object-cover" />
+          </figure>
+          <div class="card-body p-6">
+            <h3 class="card-title text-2xl font-bold text-[#264653] mb-3">Ducati XDIAVEL S-73</h3>
+            <p class="text-gray-600 leading-relaxed mb-6">Discover the perfect blend of power and elegance with the latest Ducati model featuring advanced engineering and stunning design.</p>
+            <div class="card-actions">
+              <button class="btn bg-[#E76F51] text-white border-none btn-animated">Read More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-white shadow-xl">
+          <figure>
+            <img src="images/others/latest2.png" alt="Motorcross Adventure" class="w-full h-64 object-cover" />
+          </figure>
+          <div class="card-body p-6">
+            <h3 class="card-title text-2xl font-bold text-[#264653] mb-3">Motorcross Adventure</h3>
+            <p class="text-gray-600 leading-relaxed mb-6">Take your riding experience off-road with our premium adventure bikes designed for the most challenging terrains.</p>
+            <div class="card-actions">
+              <button class="btn bg-[#E76F51] text-white border-none btn-animated">Read More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-white shadow-xl">
+          <figure>
+            <img src="images/others/latest3.png" alt="Street Performance" class="w-full h-64 object-cover" />
+          </figure>
+          <div class="card-body p-6">
+            <h3 class="card-title text-2xl font-bold text-[#264653] mb-3">Street Performance</h3>
+            <p class="text-gray-600 leading-relaxed mb-6">Experience urban riding like never before with our collection of street performance motorcycles built for city adventures.</p>
+            <div class="card-actions">
+              <button class="btn bg-[#E76F51] text-white border-none btn-animated">Read More</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50 -mx-4 px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-[#264653]">Happy <span class="text-[#E76F51]">Clients Says</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="card bg-white shadow-xl p-8 text-center">
+          <div class="flex justify-center mb-6">
+            <img src="images/others/user-1.png" alt="Regina Miles" class="w-20 h-20 rounded-full object-cover border-4 border-[#E76F51]">
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            BikerZone helped me find the perfect motorcycle that fits my budget and riding style. The customer service is exceptional and the quality is outstanding.
+          </p>
+          <div class="flex justify-center items-center gap-1 mb-4">
+            <img src="images/icons/star-solid.svg" alt="star" class="w-5 h-5">
+            <img src="images/icons/star-solid.svg" alt="star" class="w-5 h-5">
+            <img src="images/icons/star-solid.svg" alt="star" class="w-5 h-5">
+            <img src="images/icons/star-solid.svg" alt="star" class="w-5 h-5">
+            <img src="images/icons/star-regular.svg" alt="star" class="w-5 h-5">
+          </div>
+          <div>
+            <h4 class="font-bold text-lg text-[#264653]">Regina Miles</h4>
+            <p class="text-sm text-gray-500 font-semibold">Banker</p>
+          </div>
+        </div>
+
+        <div class="card bg-white shadow-xl p-8 text-center">
+          <div class="flex justify-center mb-6">
+            <img src="images/others/user-1.png" alt="Sarah Johnson" class="w-20 h-20 rounded-full object-cover border-4 border-[#E76F51]">
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Amazing experience from start to finish. The team was professional, knowledgeable, and helped me make the right choice for my first motorcycle purchase.
+          </p>
+          <div class="flex justify-center items-center gap-1 mb-4">
+            <img src="images/icons/star-solid.svg" alt="star" class="w-5 h-5">
+            <img src="images/icons/star-solid.svg" alt="star" class="w-5 h-5">
+            <img src="images/icons/star-solid.svg" alt="star" class="w-5 h-5">
+            <img src="images/icons/star-solid.svg" alt="star" class="w-5 h-5">
+            <img src="images/icons/star-solid.svg" alt="star" class="w-5 h-5">
+          </div>
+          <div>
+            <h4 class="font-bold text-lg text-[#264653]">Sarah Johnson</h4>
+            <p class="text-sm text-gray-500 font-semibold">Designer</p>
+          </div>
+        </div>
+
+        <div class="card bg-white shadow-xl p-8 text-center">
+          <div class="flex justify-center mb-6">
+            <img src="images/others/user-1.png" alt="Mike Chen" class="w-20 h-20 rounded-full object-cover border-4 border-[#E76F51]">
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Outstanding quality and service. I've purchased three bikes from BikerZone and each experience has been better than the last. Highly recommended!
+          </p>
+          <div class="flex justify-center items-center gap-1 mb-4">
+            <img src="images/icons/star-solid.svg" alt="star" class="w-5 h-5">
+            <img src="images/icons/star-solid.svg" alt="star" class="w-5 h-5">
+            <img src="images/icons/star-solid.svg" alt="star" class="w-5 h-5">
+            <img src="images/icons/star-solid.svg" alt="star" class="w-5 h-5">
+            <img src="images/icons/star-regular.svg" alt="star" class="w-5 h-5">
+          </div>
+          <div>
+            <h4 class="font-bold text-lg text-[#264653]">Mike Chen</h4>
+            <p class="text-sm text-gray-500 font-semibold">Engineer</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-[#264653]">
+          Frequently Asked <span class="text-[#E76F51]">Questions</span>
+        </h2>
+      </div>
+
+      <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
+        
+        <div class="flex-shrink-0">
+          <img src="images/others/shopping.png" class="w-full max-w-md lg:max-w-lg h-auto object-contain" alt="Shopping">
+        </div>
+
+        <div class="w-full max-w-2xl space-y-4">
+          
+          <div class="collapse collapse-arrow bg-white border border-gray-200 rounded-lg shadow-sm">
+            <input type="radio" name="faq-accordion" checked="checked" />
+            <div class="collapse-title font-semibold text-lg text-[#264653]">
+              What are the most important things I should know about riding a bike?
+            </div>
+            <div class="collapse-content text-gray-600 leading-relaxed">
+              Safety is paramount! Always wear proper protective gear, follow traffic laws, and maintain your motorcycle regularly. Get proper training and never ride beyond your skill level. Always be visible and predictable on the road.
+            </div>
+          </div>
+
+          <div class="collapse collapse-arrow bg-white border border-gray-200 rounded-lg shadow-sm">
+            <input type="radio" name="faq-accordion" />
+            <div class="collapse-title font-semibold text-lg text-[#264653]">
+              How can I tell if my helmet is old and I need a new one?
+            </div>
+            <div class="collapse-content text-gray-600 leading-relaxed">
+              Replace your helmet if it's over 5 years old, has visible cracks, loose padding, worn straps, or has been in any accident. Even minor impacts can compromise the helmet's protective capabilities.
+            </div>
+          </div>
+
+          <div class="collapse collapse-arrow bg-white border border-gray-200 rounded-lg shadow-sm">
+            <input type="radio" name="faq-accordion" />
+            <div class="collapse-title font-semibold text-lg text-[#264653]">
+              My bike has been in storage. Is it safe to ride?
+            </div>
+            <div class="collapse-content text-gray-600 leading-relaxed">
+              Before riding, check tire pressure and condition, test brakes, inspect fluid levels, ensure the chain is properly lubricated, and verify all lights work. A professional inspection is recommended for extended storage periods.
+            </div>
+          </div>
+
+          <div class="collapse collapse-arrow bg-white border border-gray-200 rounded-lg shadow-sm">
+            <input type="radio" name="faq-accordion" />
+            <div class="collapse-title font-semibold text-lg text-[#264653]">
+              What rules should I follow when riding my bike?
+            </div>
+            <div class="collapse-content text-gray-600 leading-relaxed">
+              Always wear a DOT-approved helmet and protective gear, use proper hand signals, ride with traffic flow, maintain a safe following distance, stay alert and avoid distractions, and never ride under the influence.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white mt-20">
+    <div class="max-w-7xl mx-auto px-4 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div>
+          <h3 class="font-bold text-xl mb-6 text-[#E76F51]">Download Now</h3>
+          <div class="space-y-3">
+            <a href="#" class="block">Mobile App</a>
+            <a href="#" class="block">Desktop App</a>
+            <a href="#" class="block">Browser Extension</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-xl mb-6 text-[#E76F51]">Company</h3>
+          <div class="space-y-3">
+            <a href="#" class="block">About Us</a>
+            <a href="#" class="block">Careers</a>
+            <a href="#" class="block">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-xl mb-6 text-[#E76F51]">Support</h3>
+          <div class="space-y-3">
+            <a href="#" class="block">Help Center</a>
+            <a href="#" class="block">Privacy Policy</a>
+            <a href="#" class="block">Terms of Service</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-xl mb-6 text-[#E76F51]">Get The App</h3>
+          <div class="space-y-4">
+            <a href="#" class="block">
+              <img src="images/others/ios.png" alt="Download on App Store" class="w-36 h-auto">
+            </a>
+            <a href="#" class="block">
+              <img src="images/others/android.png" alt="Get it on Google Play" class="w-36 h-auto">
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-gray-600 mt-12 pt-8 text-center">
+        <p class="text-gray-300">&copy; 2024 BikerZone. All rights reserved. Built with passion for riders.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
